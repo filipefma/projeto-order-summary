@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --pale-blue-color: hsl(225, 100%, 94%);
+  --bright-blue-color: hsl(245, 75%, 52%);
+
+  --very-pale-blue-color: hsl(225, 100%, 98%);
+  --desaturated-blue-color: hsl(224, 23%, 55%);
+  --dark-blue-color: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: 'Red Hat Display';
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue-color);
+}
+
+.container {
+  width: 450px;
+  height: auto;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 5px 25px 20px rgba(0, 0, 0, .1);
+}
+.container img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+#hero-img img {
+  width: 100%;
+}
+
+#title {
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 30px;
+  color: var(--dark-blue-color);
+}
+
+#description {
+  font-weight: 500;
+  color: var(--desaturated-blue-color);
+  text-align: center;
+  margin: 20px 50px;
+}
+
+.menu {
+  width: 350px;
+  padding: 15px 20px;
+  background-color: var(--very-pale-blue-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.plan {
+  text-align: center;
+  margin-left: -80px;
+}
+#type {
+  font-weight: 900;
+  color: var(--dark-blue-color);
+}
+#price {
+  font: 500;
+  color: var(--desaturated-blue-color);
+}
+#change {
+  text-decoration: underline;
+  font-weight: 700;
+  color: var(--bright-blue-color);
+  cursor: pointer;
+}
+#change:hover {
+  text-decoration: none;
+  font-weight: 700;
+  opacity: .7;
+}
+
+#payment-btn {
+  width: 350px;
+  margin-top: 30px;
+  padding: 15px 0;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--bright-blue-color);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 1px 20px 10px rgba(0, 0, 0, .1);
+}
+#payment-btn:hover {
+  opacity: .7;
+}
+
+#cancel-btn {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border: none;
+  background: none;
+  color: var(--desaturated-blue-color);
+  font-weight: 900;
+  cursor: pointer;
+}
+#cancel-btn:hover {
+  color: var(--dark-blue-color);
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+  .container {
+    width: 375px;
+    padding: 0 10px
+  }
+  #hero-img {
+    width: 375px;
+  }
+  .menu {
+    width: 100%;
+  }
+}
